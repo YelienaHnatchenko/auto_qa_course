@@ -12,11 +12,10 @@ describe('UI tests for sign in page', () => {
         cy.get(sign_in.title_text).should('be.visible').and('have.text', 'Sign in')
     })
     // Homework 14.07:
-    // 1. should show typeable Username field
+    // 1-2. should show typeable Username and Password fields
     it('should show typeable Username field', () => {
         cy.get(sign_in.username_field).should('be.visible')
     })
-    // 2. should show typeable Password field
     it('should show typeable Password field', () => {
         cy.get(sign_in.password_field).should('be.visible')
     })
