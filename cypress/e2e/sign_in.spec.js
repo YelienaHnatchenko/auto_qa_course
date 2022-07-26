@@ -28,8 +28,7 @@ describe('UI tests for sign in page', () => {
         cy.get(sign_in.password_placeholder).should('be.visible')
     })
     // 4. should show 'Username is required' error if user clicks on it and then click outside this field and didn't enter any value
-    it('should show Username is required error if user clicks on it and then click outside this field and didnt enter any value',
-        () => {
+    it('should show Username is required error if user clicks on it and then click outside this field and didnt enter any value',() => {
         cy.get(sign_in.username_placeholder).should('be.visible').click().and('have.attr','value','')
         cy.get('.makeStyles-root-1').click()
         cy.get(sign_in.user_is_required_text).should('be.visible')
@@ -44,7 +43,6 @@ describe('UI tests for sign in page', () => {
     it('should show disabled by default sign in btn', () => {
         cy.get(sign_in.disabled_sign_btn).should('be.visible').and('be.disabled')
     })
-
     // 7. should have 'Don't have an account? Sign Up' clickable link under 'Sign in' btn
     it('should have ~Dont have an account? Sign Up~ clickable link under ~Sign in~ btn', () => {
         cy.get(sign_in.dont_have_acc_link).should('be.visible').click()
